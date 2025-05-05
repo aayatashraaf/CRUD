@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link rel="stylesheet" href="css/all.min.css" />
+  <link rel="stylesheet" href="css/bootstrap.min.css" />
+  <link rel="stylesheet" href="css/style7.css" />
+  <title>CRUD</title>
+</head>
+<body>
+  <form class="w-75 mx-auto text-start p-3 mt-5">
+    <div class="text-start mb-1">ProductName:</div>
+    <input id="inputName" onkeyup="validateProuductName()" class="form-control mb-1" type="text" />
+    <div id="nameAlert" class="text-danger d-none">Product name must start with Upper and 8 char</div>
+
+    <div class="text-start mb-1">ProductPrice:</div>
+    <input id="inputPrice" class="form-control mb-3" type="number" />
+
+    <div class="text-start mb-1">ProductCategory:</div>
+    <input id="inputCat" class="form-control mb-3" type="text" />
+
+    <div class="text-start mb-1">ProductDescription:</div>
+    <textarea id="inputDesc" class="form-control mb-3" rows="2"></textarea>
+
+    <button id="addBtn" onclick="add()" type="button" class="btn btn-outline-info mt-2">Add Product</button>
+    <button id="updateBtn" onclick="update()" type="button" class="btn btn-outline-info mt-2 d-none">Update</button>
+
+    <input onkeyup="search(this.value)" type="text" placeholder="search product"
+      class="form-control mt-5 mx-auto" style="width: 85%;" />
+  </form>
+  <div class="container mt-5">
+    <table class="text-center w-100">
+      <thead>
+        <tr>
+          <th>index</th>
+          <th>ProductName</th>
+          <th>ProductPrice</th>
+          <th>ProductCategory</th>
+          <th>ProductDesc</th>
+          <th>Update</th>
+          <th>Delete</th>
+        </tr>
+      </thead>
+      <tbody id="tableBody"></tbody>
+    </table>
+  </div>
+
+  <script src="JS/bootstrap.bundle.min.js"></script>
+  <script src="JS/main7.js"></script>
+</body>
+</html>
