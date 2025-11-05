@@ -1,27 +1,57 @@
-*{
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
-  thead tr {
-    border-bottom: 1px solid #000;
-  }
-  tbody tr {
-    border-bottom: 1px solid #ccc;
-  }
-  th {
-    padding-bottom: 10px;
-  }
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  text-align: center;
+}
+
+/* صفوف الجدول */
+thead tr {
+  border-bottom: 2px solid #000;
+  background-color: #f8f8f8;
+}
+
+tbody tr {
+  border-bottom: 1px solid #ccc;
+}
+
+/* خلايا الجدول */
+th, td {
+  padding: 10px 15px; /* مسافة داخلية تخلي الكلمات تبعد عن بعض */
+  white-space: nowrap; /* يمنع تلاصق النصوص */
+}
+
+/* تنسيق العناوين */
+th {
+  font-weight: bold;
+  letter-spacing: 1px; /* مسافة بين الحروف */
+}
+
+/* أزرار التعديل والحذف */
+.btn-outline-warning:hover {
+  color: black !important;
+}
+
+.btn-outline-danger:hover {
+  color: white !important;
+}
+
+/* تحسين المظهر على الموبايل */
+@media (max-width: 600px) {
   table {
-    border-collapse: collapse;
+    font-size: 12px;
   }
-  .btn-outline-warning:hover {
-    color:black !important;
+
+  th, td {
+    padding: 8px;
   }
-  
-  .btn-outline-danger:hover {
-    color: white !important;
-  }
-  
+}
+
   
   
